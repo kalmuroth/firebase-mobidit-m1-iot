@@ -230,12 +230,17 @@ app_user.delete("/:id", async (req, res) => {
     res.status(200).send();
 })
 
-exports.updateUserCount = functions.region('europe-west2').auth.user().onCreate((user) => {
-    app_user.post("/", async (res) => {
-        await admin.firestore().collection("users").add(user);
-    
-        res.status(200).send();
-    });
+exports.updateUserCount = functions.region('europe-west2').auth.user().onCreate(async (user) => {
+    try {
+      const { uid, email} = user;
+      const docRef = admin.firestore().collection("users").doc(uid);
+      await docRef.set({ uid, email});
+  
+      return;
+    } catch (error) {
+      console.error("Error updating user count:", error);
+      throw error;
+    }
 });
 
 exports.user = functions.region('europe-west2').https.onRequest(app_user);
