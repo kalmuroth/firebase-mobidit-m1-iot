@@ -53,7 +53,7 @@ app_category.delete("/:id", async (req, res) => {
     await admin.firestore().collection("categories").doc(req.params.id).delete();
 
     res.status(200).send();
-})
+});
 
 app_category.post("/:id", async (req, res) => {
     try {
@@ -66,7 +66,7 @@ app_category.post("/:id", async (req, res) => {
 
       res.status(500).json({ error: "Internal server error" });
     }
-  });
+});
 
 exports.category = functions.region('europe-west2').https.onRequest(app_category)
 
@@ -107,7 +107,7 @@ app_post.delete("/:id", async (req, res) => {
     await admin.firestore().collection("posts").doc(req.params.id).delete();
 
     res.status(200).send();
-})
+});
 
 app_post.post("/:id", async (req, res) => {
     try {
@@ -120,7 +120,7 @@ app_post.post("/:id", async (req, res) => {
       console.error("Error updating data:", error);
       res.status(500).json({ error: "Internal server error" });
     }
-  });
+});
 
 exports.post = functions.region('europe-west2').https.onRequest(app_post);
 
@@ -161,7 +161,7 @@ app_comment.delete("/:id", async (req, res) => {
     await admin.firestore().collection("comments").doc(req.params.id).delete();
 
     res.status(200).send();
-})
+});
 
 app_comment.post("/:id", async (req, res) => {
     try {
@@ -174,6 +174,68 @@ app_comment.post("/:id", async (req, res) => {
       console.error("Error updating data:", error);
       res.status(500).json({ error: "Internal server error" });
     }
-  });
+});
 
 exports.comment = functions.region('europe-west2').https.onRequest(app_comment);
+
+//--------------------------------------------------------------
+//--------ROUTE TO ADMINISTRATE USERS---------------------------
+//--------------------------------------------------------------
+
+const app_user = express();
+
+app_user.get("/:id", async (req, res) => {
+    const snapshot = await admin.firestore().collection("users").doc(req.params.id).get();
+    const keyData = snapshot.data();
+    
+    res.status(200).send(JSON.stringify({keyData}));
+});
+
+app_user.get("/", async (req, res) => {
+    const snapshot = await admin.firestore().collection("users").get();
+    const keys = [];
+    
+    snapshot.forEach((doc) => {
+        const keyId = doc.id;
+        const keyData = doc.data();
+        keys.push({keyId,keyData });
+    });
+
+    res.status(200).send(JSON.stringify(keys));
+});
+
+app_user.post("/", async (req, res) => {
+    const key = req.body;
+    await admin.firestore().collection("users").add(key);
+
+    res.status(200).send();
+});
+
+app_user.post("/:id", async (req, res) => {
+    try {
+      const newData = req.body;
+      const docRef = admin.firestore().collection("users").doc(req.params.id);
+      await docRef.update(newData);
+  
+      res.status(200).send();
+    } catch (error) {
+      console.error("Error updating data:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+app_user.delete("/:id", async (req, res) => {
+    await admin.firestore().collection("users").doc(req.params.id).delete();
+
+    res.status(200).send();
+})
+
+exports.updateUserCount = functions.region('europe-west2').auth.user().onCreate((user) => {
+    app_user.post("/", async (res) => {
+        await admin.firestore().collection("users").add(user);
+    
+        res.status(200).send();
+    });
+});
+
+exports.user = functions.region('europe-west2').https.onRequest(app_user);
