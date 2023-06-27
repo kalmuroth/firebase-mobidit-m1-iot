@@ -24,7 +24,7 @@ app_category.post("/", async (req, res) => {
     const category = req.body;
     await admin.firestore().collection("categories").add(category);
 
-    res.status(201).send();
+    res.status(200).send();
 });
 
 app_category.get("/:id", async (req, res) => {
@@ -55,6 +55,19 @@ app_category.delete("/:id", async (req, res) => {
     res.status(200).send();
 })
 
+app_category.post("/:id", async (req, res) => {
+    try {
+      const newData = req.body;
+      const docRef = admin.firestore().collection("categories").doc(req.params.id);
+      await docRef.update(newData);
+  
+      res.status(200).send();
+    } catch (error) {
+
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
 exports.category = functions.region('europe-west2').https.onRequest(app_category)
 
 
@@ -68,7 +81,7 @@ app_post.post("/", async (req, res) => {
     const key = req.body;
     await admin.firestore().collection("posts").add(key);
 
-    res.status(201).send();
+    res.status(200).send();
 });
 
 app_post.get("/:id", async (req, res) => {
@@ -96,6 +109,19 @@ app_post.delete("/:id", async (req, res) => {
     res.status(200).send();
 })
 
+app_post.post("/:id", async (req, res) => {
+    try {
+      const newData = req.body;
+      const docRef = admin.firestore().collection("posts").doc(req.params.id);
+      await docRef.update(newData);
+  
+      res.status(200).send();
+    } catch (error) {
+      console.error("Error updating data:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
 exports.post = functions.region('europe-west2').https.onRequest(app_post);
 
 //--------------------------------------------------------------
@@ -108,7 +134,7 @@ app_comment.post("/", async (req, res) => {
     const key = req.body;
     await admin.firestore().collection("comments").add(key);
 
-    res.status(201).send();
+    res.status(200).send();
 });
 
 app_comment.get("/:id", async (req, res) => {
@@ -117,6 +143,7 @@ app_comment.get("/:id", async (req, res) => {
     
     res.status(200).send(JSON.stringify({keyData}));
 });
+
 app_comment.get("/", async (req, res) => {
     const snapshot = await admin.firestore().collection("comments").get();
     const keys = [];
@@ -135,5 +162,18 @@ app_comment.delete("/:id", async (req, res) => {
 
     res.status(200).send();
 })
+
+app_comment.post("/:id", async (req, res) => {
+    try {
+      const newData = req.body;
+      const docRef = admin.firestore().collection("comments").doc(req.params.id);
+      await docRef.update(newData);
+  
+      res.status(200).send();
+    } catch (error) {
+      console.error("Error updating data:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
 
 exports.comment = functions.region('europe-west2').https.onRequest(app_comment);
