@@ -3,7 +3,7 @@
 ## End-point: get
 ### Method: GET
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment/JYcw4aaFIcCmRfnxkSI6
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-comment/JYcw4aaFIcCmRfnxkSI6
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -11,7 +11,7 @@
 ## End-point: getAll
 ### Method: GET
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-comment
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -19,7 +19,7 @@
 ## End-point: post
 ### Method: POST
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-comment
 >```
 ### Body (**raw**)
 
@@ -37,7 +37,7 @@
 ## End-point: update
 ### Method: POST
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment/ZQXafziChXp1Gwe9dOLW
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-comment/ZQXafziChXp1Gwe9dOLW
 >```
 ### Body (**raw**)
 
@@ -49,13 +49,21 @@
 }
 ```
 
+⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
+
+## End-point: getCommentByPostId
+### Method: POST
+>```
+>hhttps://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-getPost/ZQXafziChXp1Gwe9dOLW
+>```
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: delete
 ### Method: DELETE
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment/JYcw4aaFIcCmRfnxkSI6
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-comment/JYcw4aaFIcCmRfnxkSI6
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃

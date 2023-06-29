@@ -239,3 +239,25 @@ app_user.delete("/:id", async (req, res) => {
 })
 
 exports.user = functions.region('europe-west2').https.onRequest(app_user);
+
+const app_get_post = express();
+
+// Retrieve comments with the same id_post
+app_get_post.post("/:id", async (req, res) => {
+    try {
+      const postId = req.params.id;
+      
+      const commentsSnapshot = await admin.firestore().collection("comments").where("id_post", "==", postId).get();
+      const comments = [];
+      commentsSnapshot.forEach((doc) => {
+        comments.push(doc.data());
+      });
+  
+      res.status(200).json(comments);
+    } catch (error) {
+      console.error("Error retrieving comments:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+exports.getPost = functions.region('europe-west2').https.onRequest(app_get_post);
