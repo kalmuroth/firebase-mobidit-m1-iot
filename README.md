@@ -13,8 +13,8 @@ Deploy the Firebase Functions to your project by running `firebase deploy --only
 
 ### [Category - Local](documentation/category_local.md)
 ### [Category - Prod](documentation/category_prod.md)
-### [Comment - Local](documentation/Comment_local.md)
-### [Comment - Prod](documentation/Comment_prod.md)
+### [Comment - Local](documentation/comment_local.md)
+### [Comment - Prod](documentation/comment_prod.md)
 ### [Post - Local](documentation/post_local.md)
 ### [Post - Prod](documentation/post_prod.md)
 ### [User - Local](documentation/user_local.md)
