@@ -11,5 +11,5 @@ Deploy the Firebase Functions to your project by running `firebase deploy --only
 
 ## Features
 
-### [Category - Local](documentation/Category - Local.m)
+### [Category - Local](documentation/Category - Local.md)
 
