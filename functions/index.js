@@ -258,7 +258,7 @@ exports.updateUser = functions.region('europe-west2').auth.user().onCreate(async
 
 
 //upload image to firebase bucket
-exports.uploadFile = functions.region('europe-west2').https.onRequest((req, res) => {
+exports.uploadFileWithPath = functions.region('europe-west2').https.onRequest((req, res) => {
   var form = new formidable.IncomingForm();
   return new Promise((resolve, reject) => {
     form.parse(req, function(err, fields, files) {

@@ -1,9 +1,9 @@
-# Project: category - local
+# Project: category - prod
 
 ## End-point: get
 ### Method: GET
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/lLRLcN3XRXSdBCmCEVta
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/category/JYcw4aaFIcCmRfnxkSI6
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -11,7 +11,7 @@
 ## End-point: getAll
 ### Method: GET
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/category
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -19,7 +19,7 @@
 ## End-point: post
 ### Method: POST
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/category
 >```
 ### Body (**raw**)
 
@@ -35,7 +35,7 @@
 ## End-point: update
 ### Method: POST
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/Qx3WvT0EQ0BQvxh6ZOmK
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/category/Qx3WvT0EQ0BQvxh6ZOmK
 >```
 ### Body (**raw**)
 
@@ -51,7 +51,7 @@
 ## End-point: delete
 ### Method: DELETE
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/Qx3WvT0EQ0BQvxh6ZOmK
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/category/JYcw4aaFIcCmRfnxkSI6
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃

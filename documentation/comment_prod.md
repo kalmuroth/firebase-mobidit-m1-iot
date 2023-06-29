@@ -1,9 +1,9 @@
-# Project: category - local
+# Project: comments - prod
 
 ## End-point: get
 ### Method: GET
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/lLRLcN3XRXSdBCmCEVta
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment/JYcw4aaFIcCmRfnxkSI6
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -11,7 +11,7 @@
 ## End-point: getAll
 ### Method: GET
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -19,13 +19,15 @@
 ## End-point: post
 ### Method: POST
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment
 >```
 ### Body (**raw**)
 
 ```json
 {
-    "name":"R/Italie"
+    "id_post":"e1pORYZinzgqoj701klI",
+    "id_user":"nhNV9RF0xOPAJfpCu6D8",
+    "like": 56
 }
 ```
 
@@ -35,13 +37,15 @@
 ## End-point: update
 ### Method: POST
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/Qx3WvT0EQ0BQvxh6ZOmK
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment/ZQXafziChXp1Gwe9dOLW
 >```
 ### Body (**raw**)
 
 ```json
 {
-    "name":"R/Italie"
+    "id_post":"e1pORYZinzgqoj701klI",
+    "id_user":"nhNV9RF0xOPAJfpCu6D8",
+    "like": 57
 }
 ```
 
@@ -51,7 +55,7 @@
 ## End-point: delete
 ### Method: DELETE
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/category/Qx3WvT0EQ0BQvxh6ZOmK
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/comment/JYcw4aaFIcCmRfnxkSI6
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
