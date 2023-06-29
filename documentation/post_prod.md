@@ -3,7 +3,7 @@
 ## End-point: get
 ### Method: GET
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/post/JYcw4aaFIcCmRfnxkSI6
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-post/JYcw4aaFIcCmRfnxkSI6
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -11,7 +11,7 @@
 ## End-point: getAll
 ### Method: GET
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/post
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-post
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -19,7 +19,7 @@
 ## End-point: post
 ### Method: POST
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/post
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-post
 >```
 ### Body (**raw**)
 
@@ -40,7 +40,7 @@
 ## End-point: update
 ### Method: POST
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/post/JYcw4aaFIcCmRfnxkSI6
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-post/JYcw4aaFIcCmRfnxkSI6
 >```
 ### Body (**raw**)
 
@@ -61,7 +61,7 @@
 ## End-point: delete
 ### Method: DELETE
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/post/JYcw4aaFIcCmRfnxkSI6
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/admin-post/JYcw4aaFIcCmRfnxkSI6
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃

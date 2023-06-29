@@ -3,7 +3,7 @@
 ## End-point: post
 ### Method: POST
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/uploadFileWithPath
+>http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/upload-uploadFileWithPath
 >```
 ### Body formdata
 

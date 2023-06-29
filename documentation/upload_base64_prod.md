@@ -3,7 +3,7 @@
 ## End-point: post
 ### Method: POST
 >```
->https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/uploadFileInBase64
+>https://europe-west2-flutter-mobidit-m1-iot.cloudfunctions.net/upload-uploadFileInBase64
 >```
 ### Body (**raw**)
 

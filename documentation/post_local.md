@@ -3,7 +3,7 @@
 ## End-point: get
 ### Method: GET
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/post/lLRLcN3XRXSdBCmCEVta
+>http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/admin-post/lLRLcN3XRXSdBCmCEVta
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -11,7 +11,7 @@
 ## End-point: getAll
 ### Method: GET
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/post/
+>http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/admin-post/
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
@@ -19,7 +19,7 @@
 ## End-point: post
 ### Method: POST
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/post
+>http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/admin-post
 >```
 ### Body (**raw**)
 
@@ -40,7 +40,7 @@
 ## End-point: update
 ### Method: POST
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/post/r8WLdCBINky6d6F6gewn
+>http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/admin-post/r8WLdCBINky6d6F6gewn
 >```
 ### Body (**raw**)
 
@@ -61,7 +61,7 @@
 ## End-point: delete
 ### Method: DELETE
 >```
->http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/post/r8WLdCBINky6d6F6gewn
+>http://localhost:5001/flutter-mobidit-m1-iot/europe-west2/admin-post/r8WLdCBINky6d6F6gewn
 >```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
