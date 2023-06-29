@@ -8,3 +8,8 @@ Run `npm install` to install the project dependencies.
 Configure Firebase by running `firebase login` and `firebase init`<br />
 Run firebase function locally with `firebase emulators:start` <br />
 Deploy the Firebase Functions to your project by running `firebase deploy --only functions`. <br />
+
+## Features
+
+### [Category - Local](documentation/Category - Local.m)
+

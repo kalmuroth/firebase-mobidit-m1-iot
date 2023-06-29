@@ -204,8 +204,6 @@ app_user.get("/:id", async (req, res) => {
 app_user.get("/", async (req, res) => {
     const snapshot = await admin.firestore().collection("users").get();
     const keys = [];
-    const speudo = getRandomUsername()
-    console.log(speudo)
     snapshot.forEach((doc) => {
         const keyId = doc.id;
         const keyData = doc.data();
@@ -244,11 +242,12 @@ app_user.delete("/:id", async (req, res) => {
 exports.user = functions.region('europe-west2').https.onRequest(app_user);
 
 //on user.create in Firebase Auth => method trigger => add user in database (uuid/email)
-exports.updateUserCount = functions.region('europe-west2').auth.user().onCreate(async (user) => {
+exports.updateUser = functions.region('europe-west2').auth.user().onCreate(async (user) => {
   try {
+    const speudo = await getRandomUsername()
     const { uid, email} = user;
     const docRef = admin.firestore().collection("users").doc(uid);
-    await docRef.set({ uid, email});
+    await docRef.set({ uid, email, speudo});
 
     return;
   } catch (error) {
