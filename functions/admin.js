@@ -243,7 +243,7 @@ exports.user = functions.region('europe-west2').https.onRequest(app_user);
 const app_get_post = express();
 
 // Retrieve comments with the same id_post
-app_get_post.post("/:id", async (req, res) => {
+app_get_post.get("/:id", async (req, res) => {
     try {
       const postId = req.params.id;
       
