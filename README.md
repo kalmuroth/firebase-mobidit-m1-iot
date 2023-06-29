@@ -22,5 +22,5 @@ Deploy the Firebase Functions to your project by running `firebase deploy --only
 ### [Upload (base64) - Local](documentation/upload_base64_local.md)
 ### [Upload (base64) - Prod](documentation/upload_base64_prod.md)
 ### [Upload (path) - Local](documentation/upload_path_local.md)
-### [Upload (path) - Prod](documentation/upload_path_local.md)
+### [Upload (path) - Prod](documentation/upload_path_prod.md)
 
