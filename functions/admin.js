@@ -240,85 +240,30 @@ app_user.delete("/:id", async (req, res) => {
 
 exports.user = functions.region('europe-west2').https.onRequest(app_user);
 
-//--------------------------------------------------------------
-//--------ROUTE TO ADMINISTRATE LIKES---------------------------
-//--------------------------------------------------------------
-
-//creates an instance of the Express application for managing category routes.
-const app_like = express();
-
-//Defines a POST route
-app_like.post("/", async (req, res) => {
-  const key = req.body;
-  await admin.firestore().collection("likes").add(key);
-
-  res.status(200).send();
-});
-
-//Defines a GET route by id
-app_like.get("/:id", async (req, res) => {
-    const snapshot = await admin.firestore().collection("likes").doc(req.params.id).get();
-    const keyData = snapshot.data();
-    
-    res.status(200).send(JSON.stringify({keyData}));
-});
-
-//Defines a GET route for retrieving all 
-app_like.get("/", async (req, res) => {
-    const snapshot = await admin.firestore().collection("likes").get();
-    const keys = [];
-    snapshot.forEach((doc) => {
-        const keyId = doc.id;
-        const keyData = doc.data();
-        keys.push({keyId,keyData });
-    });
-
-    res.status(200).send(JSON.stringify(keys));
-});
-
-//Defines a POST route for updating
-app_like.post("/:id", async (req, res) => {
-    try {
-      const newData = req.body;
-      const docRef = admin.firestore().collection("likes").doc(req.params.id);
-      await docRef.update(newData);
-  
-      res.status(200).send();
-    } catch (error) {
-      console.error("Error updating data:", error);
-      res.status(500).json({ error: "Internal server error" });
-    }
-});
-
-//Defines a DELETE route
-app_like.delete("/:id", async (req, res) => {
-    await admin.firestore().collection("likes").doc(req.params.id).delete();
-
-    res.status(200).send();
-})
-
-exports.like = functions.region('europe-west2').https.onRequest(app_like);
-
-//creates an instance of the Express application.
+//Creates an instance of the Express application.
 const app_get_post = express();
 
-// Retrieve comments with the same id_post
+//Retrieve comments with the same id_post
 app_get_post.get("/:id", async (req, res) => {
-    try {
-      const postId = req.params.id;
-      
-      const commentsSnapshot = await admin.firestore().collection("comments").where("id_post", "==", postId).get();
-      const comments = [];
-      commentsSnapshot.forEach((doc) => {
-        comments.push(doc.data());
-      });
-  
-      res.status(200).json(comments);
-    } catch (error) {
-      console.error("Error retrieving comments:", error);
-      res.status(500).json({ error: "Internal server error" });
-    }
+  try {
+    const postId = req.params.id;
+    
+    const commentsSnapshot = await admin.firestore().collection("comments").where("id_post", "==", postId).get();
+    const comments = [];
+    
+    commentsSnapshot.forEach((doc) => {
+      const commentData = doc.data();
+      const commentWithId = { id: doc.id, ...commentData };
+      comments.push(commentWithId);
+    });
+
+    res.status(200).json(comments);
+  } catch (error) {
+    console.error("Error retrieving comments:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
+
 
 exports.getPost = functions.region('europe-west2').https.onRequest(app_get_post);
 
