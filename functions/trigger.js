@@ -5,10 +5,11 @@ const fetch = require('node-fetch');
 //on user.create in Firebase Auth => method trigger => add user in database (uuid/email)
 exports.updateUser = functions.region('europe-west2').auth.user().onCreate(async (user) => {
     try {
-        const speudo = await getRandomUsername()
+        const speudo = await getRandomUsername();
+        const isAdmin = false;
         const { uid, email} = user;
         const docRef = admin.firestore().collection("users").doc(uid);
-        await docRef.set({ uid, email, speudo});
+        await docRef.set({ uid, email, speudo, isAdmin});
 
         return;
     } catch (error) {

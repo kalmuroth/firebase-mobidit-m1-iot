@@ -6,6 +6,7 @@ const os = require('os');
 const path = require('path');
 const { Storage } = require('@google-cloud/storage');
 const storage = new Storage();
+const crypto = require('crypto');
 require('dotenv').config();
 
 //upload image to firebase bucket
@@ -65,7 +66,12 @@ exports.uploadFileWithPath = functions.region('europe-west2').https.onRequest((r
   
       const bucket = storage.bucket('flutter-mobidit-m1-iot.appspot.com');
       const bucketName ='flutter-mobidit-m1-iot.appspot.com';
-      const fileName = 'image.jpg';
+  
+      // Generate a random number
+      const randomNumber = Math.floor(Math.random() * 10000);
+  
+      // Generate the file name with the random number and timestamp
+      const fileName = `image_${Date.now()}_${randomNumber}.jpg`;
   
       const [uploadedFile] = await storageWithAuth.bucket(bucketName).upload(tempFilePath, {
         destination: fileName,
@@ -85,3 +91,4 @@ exports.uploadFileWithPath = functions.region('europe-west2').https.onRequest((r
       res.status(500).send('Error while decoding or uploading the file: ' + err);
     }
   });
+  
